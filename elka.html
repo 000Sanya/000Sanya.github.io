@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <img src="/img/blue.png" alt="">
+                        <button class="add_button blue">+</button>
+                    </img>
+                    <img src="/img/green.png" alt="">
+                        <button class="add_button green">+</button>
+                    </img>
+                    <img src="/img/purple.png" alt="">
+                        <button class="add_button purple">+</button>
+                    </img>
+                    <img src="/img/red.png" alt="">
+                        <button class="add_button red">+</button>
+                    </img>
+                    <button class="dump">DUMP!</button>
+                    <button class="build-name">ПОСТРОИТЬ ИМЯ!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="canvas" style="width: 768px; height: 768px; border: 2px double black; position: relative;">
+                    <div id="tree" style="position: absolute;" draggable="false">
+                        <img src="/img/tree.png" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery-3.4.1.js"></script>
+        <script src="/js/bootstrap.bundle.js"></script>
+        <script src="/js/elka.js"></script>
+    </body>
+</html>
