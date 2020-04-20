@@ -177,6 +177,31 @@
 	\label{table:table_2}
 \end{table}
 
+\subsection{Использование Gnuplot} \label{s1:s6}
+
+Данные были взяты с сайта сбора статистики по YouTube-каналам. С помощью GNU Plot исходные данные были выведены на график, и было замечено, что график роста подписчиков практически линейный. В качесте функции аппроксимации была взята функция $ y = 447 + 1.9 * x $, где $x$ - номер дня на графике, начиная с нуля.
+
+Для генерации конечного графика был написан и использован следующий скрипт:
+
+\begin{verbatim}
+set terminal png
+set output 'plot.png'
+
+set title "Количество подписчиков случайного YouTube-канала"
+set xlabel "Дата"
+set ylabel "Количество подписчиков(тыс.)"
+
+set xdata time
+set timefmt "%Y-%m-%d"
+plot "data.tsv" using 1:2 title "Данные", "data.tsv" using 1:3 title "аппроксимация" with lines
+\end{verbatim}
+
+\begin{figure}[h!]
+	\center{\includegraphics[scale=0.7]{../plots/plot.png}}
+	\caption{График роста подписчиков случайного YouTube-канала}
+	\label{fig:gnuplot}
+\end{figure}
+
 \newpage
 
 \tableofcontents
